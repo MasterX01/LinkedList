@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class MyLinkedListTest {
-    
+
     @Test
     void given3Numbers_whenAddedToLinkedList_ShouldAppearOnTop() {
         MyNode<Integer> myFirstNode = new MyNode<>(70);
