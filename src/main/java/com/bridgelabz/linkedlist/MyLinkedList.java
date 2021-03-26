@@ -23,12 +23,27 @@ public class MyLinkedList {
     public void printNodes() {
         StringBuffer nodes = new StringBuffer();
         INode tempNode = head;
-        while(tempNode != tail) {
+        while(tempNode.getNext() != null) {
             nodes.append(tempNode.getKey());
-            nodes.append("->");
+            if(tempNode != this.tail){
+                nodes.append("->");
+            }
             tempNode = tempNode.getNext();
         }
         nodes.append(tempNode.getKey());
         System.out.println(nodes);
+    }
+
+    public void append(INode myNode) {
+        if(this.head == null) {
+            this.head = myNode;
+        }
+        if(this.tail == null){
+            this.tail = myNode;
+        }else {
+            this.tail.setNext(myNode);
+            this.tail = myNode;
+
+        }
     }
 }
