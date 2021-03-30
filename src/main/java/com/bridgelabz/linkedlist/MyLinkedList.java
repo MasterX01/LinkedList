@@ -43,7 +43,6 @@ public class MyLinkedList {
         }else {
             this.tail.setNext(myNode);
             this.tail = myNode;
-
         }
     }
 
@@ -67,6 +66,17 @@ public class MyLinkedList {
         this.tail = tempNode;
         tempNode.setNext(null);
         return tempNode;
+    }
+
+    public <k> boolean search(k key){
+        INode tempnode = head;
+        while(tempnode!=null && tempnode.getNext()!=null){
+            if(tempnode.getKey()==key){
+                return true;
+            }
+            tempnode = tempnode.getNext();
+        }
+        return false;
     }
 
 }
