@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.linkedlisttest.MyLinkedListTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-03-30T06:55:11" hostname="DESKTOP-2DC5FKU" time="0.063">
+<testsuite name="com.bridgelabz.linkedlisttest.MyLinkedListTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-03-30T06:59:58" hostname="DESKTOP-2DC5FKU" time="0.051">
   <properties/>
-  <testcase name="given3Numbers_searchKeyAndInsert_ShouldBeAddedToTheLinkedList()" classname="com.bridgelabz.linkedlisttest.MyLinkedListTest" time="0.026"/>
-  <testcase name="given3Numbers_whenAppendedToLinkedList_ShouldAddAtLast()" classname="com.bridgelabz.linkedlisttest.MyLinkedListTest" time="0.001"/>
+  <testcase name="given3Numbers_searchKeyAndInsert_ShouldBeAddedToTheLinkedList()" classname="com.bridgelabz.linkedlisttest.MyLinkedListTest" time="0.024"/>
+  <testcase name="given3NumberssearchanddeleteinLinkedListResult()" classname="com.bridgelabz.linkedlisttest.MyLinkedListTest" time="0.003"/>
+  <testcase name="given3Numbers_whenAppendedToLinkedList_ShouldAddAtLast()" classname="com.bridgelabz.linkedlisttest.MyLinkedListTest" time="0.002"/>
   <testcase name="given3Numbers_whenSearchingForAnElement_ShouldReturnTrue()" classname="com.bridgelabz.linkedlisttest.MyLinkedListTest" time="0.002"/>
   <testcase name="given3Numbers_WhenAddedToLinkedList_ShouldBeAddedToBetween()" classname="com.bridgelabz.linkedlisttest.MyLinkedListTest" time="0.002"/>
-  <testcase name="given3Numbers_whenAddedToLinkedList_ShouldAppearOnTop()" classname="com.bridgelabz.linkedlisttest.MyLinkedListTest" time="0.013"/>
-  <testcase name="given3Numbers_WhenDeletedFirstElement_ShouldPassLinkedListResult()" classname="com.bridgelabz.linkedlisttest.MyLinkedListTest" time="0.005"/>
-  <testcase name="given3Numbers_whenDeleteLastElement_ShouldPassLinkedListResult()" classname="com.bridgelabz.linkedlisttest.MyLinkedListTest" time="0.002"/>
+  <testcase name="given3Numbers_whenAddedToLinkedList_ShouldAppearOnTop()" classname="com.bridgelabz.linkedlisttest.MyLinkedListTest" time="0.004"/>
+  <testcase name="given3Numbers_WhenDeletedFirstElement_ShouldPassLinkedListResult()" classname="com.bridgelabz.linkedlisttest.MyLinkedListTest" time="0.002"/>
+  <testcase name="given3Numbers_whenDeleteLastElement_ShouldPassLinkedListResult()" classname="com.bridgelabz.linkedlisttest.MyLinkedListTest" time="0.001"/>
   <system-out><![CDATA[56->30->40->70
+56->30->70
 56->30->70
 56->30->70
 56->30->70

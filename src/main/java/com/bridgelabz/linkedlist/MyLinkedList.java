@@ -81,4 +81,18 @@ public class MyLinkedList {
         return value;
     }
 
+    public void delete(INode node){
+        INode tempnode = head;
+        INode result=null;
+        while (tempnode!=null && tempnode!=node){
+            result = tempnode;
+            tempnode = tempnode.getNext();
+        }
+        if(tempnode==null)
+            return;
+        else
+            result.setNext(tempnode.getNext());
+    }
+
+
 }
