@@ -97,7 +97,7 @@ public class MyLinkedListTest {
     }
 
     @Test
-    public void given3Numbers_whenSearchingForAnElement_ShouldReturnTrue(){
+    public void given3Numbers_whenSearchingForAnElement_ShouldReturnTrue() {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
@@ -105,8 +105,30 @@ public class MyLinkedListTest {
         myLinkedList.add(myFirstNode);
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
-        boolean result = myLinkedList.search(30);
+        myLinkedList.search(30);
         myLinkedList.printNodes();
+        boolean result = myLinkedList.head.equals(myFirstNode) &&
+                myLinkedList.head.getNext().equals(mySecondNode) &&
+                myLinkedList.tail.equals(myThirdNode);
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void given3Numbers_searchKeyAndInsert_ShouldBeAddedToTheLinkedList() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyNode<Integer> myNewNode = new MyNode<>(40);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.insert(myLinkedList.search(30),myNewNode);
+        myLinkedList.printNodes();
+        boolean result = myLinkedList.head.equals(myFirstNode) &&
+                myLinkedList.head.getNext().equals(mySecondNode) &&
+                myLinkedList.head.getNext().getNext().equals(myNewNode) &&
+                myLinkedList.tail.equals(myThirdNode);
         Assertions.assertTrue(result);
     }
 }
