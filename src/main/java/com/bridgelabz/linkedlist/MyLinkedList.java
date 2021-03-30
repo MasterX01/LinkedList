@@ -25,9 +25,7 @@ public class MyLinkedList {
         INode tempNode = head;
         while(tempNode.getNext() != null) {
             nodes.append(tempNode.getKey());
-            if(tempNode != this.tail){
-                nodes.append("->");
-            }
+            nodes.append("->");
             tempNode = tempNode.getNext();
         }
         nodes.append(tempNode.getKey());
@@ -94,5 +92,18 @@ public class MyLinkedList {
             result.setNext(tempnode.getNext());
     }
 
+    public void sortAndAdd(INode myNode){
+        INode tempnode = head;
+        INode prevNode = null;
+        while (tempnode != null && (int) myNode.getKey() >= (int) tempnode.getKey()) {
+            prevNode = tempnode;
+            tempnode = tempnode.getNext();
+        }
+        if(prevNode == null)
+            this.head = myNode;
+        else
+            prevNode.setNext(myNode);
+        myNode.setNext(tempnode);
+    }
 
 }
